@@ -1,12 +1,14 @@
 # Deployment
 
-3 案比較 mock を Vercel に public 公開している。
+5 案比較 mock を Vercel に public 公開している。
 
 ## URL
 
 - **landing**: https://hoshigaoka.vercel.app
 - 案 A 重厚・格式型: https://hoshigaoka.vercel.app/mocks/a-formal/
+- 案 B 編集・雑誌型: https://hoshigaoka.vercel.app/mocks/b-editorial/
 - 案 C 地域密着型 (第1推奨): https://hoshigaoka.vercel.app/mocks/c-friendly/
+- 案 D ミニマル・企業型: https://hoshigaoka.vercel.app/mocks/d-minimal/
 - 案 E 情緒・詩的型 (第2推奨): https://hoshigaoka.vercel.app/mocks/e-emotive/
 
 ## 構成
