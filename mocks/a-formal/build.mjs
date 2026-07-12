@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Mock A (Formal) build script.
+ * デザイン案 A (Formal) build script.
  *
  * 静的 HTML を出力するだけの最小 build。npm install 不要。
  *   $ node build.mjs
@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ============================================================
-// Site metadata (Issue #4 のダミー準拠)
+// Site metadata
 // ============================================================
 const SITE = {
   name: "星ヶ丘法律事務所",
@@ -54,7 +54,7 @@ function layout({ title, description = "", active = "", body, assets = "assets",
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${title} | ${SITE.name} (仮)</title>
+  <title>${title} | ${SITE.name}</title>
   <meta name="description" content="${description}" />
   <link rel="stylesheet" href="${assets}/style.css" />
   ${extraHead}
@@ -94,7 +94,7 @@ function layout({ title, description = "", active = "", body, assets = "assets",
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div class="footer-brand">
-        <p class="footer-brand__name">${SITE.name} <span style="font-size:12px; letter-spacing:0.2em; color: var(--gold);">(仮)</span></p>
+        <p class="footer-brand__name">${SITE.name}</p>
         <p class="footer-brand__latin">${SITE.nameLatin}</p>
         <p class="footer-brand__addr">
           ${SITE.postcode}<br />
@@ -122,8 +122,7 @@ function layout({ title, description = "", active = "", body, assets = "assets",
       </div>
     </div>
     <div class="site-footer__base">
-      <span>© ${SITE.name} (仮) — All rights reserved.</span>
-      <span>Mock A / Formal</span>
+      <span>© ${SITE.name} — All rights reserved.</span>
     </div>
   </footer>
 </body>
@@ -154,7 +153,7 @@ function rel(href, depth = 0) {
 // -- TOP --------------------------------------------------------
 const topPage = () => layout({
   title: "難しい法律を、わかりやすい言葉で",
-  description: "岐阜県○○市の星ヶ丘法律事務所 (仮)。元公務員の弁護士が、地域の相続・離婚・債務整理などのご相談を、専門用語を使わず丁寧にお伺いします。",
+  description: "岐阜県○○市の星ヶ丘法律事務所。元公務員の弁護士が、地域の相続・離婚・債務整理などのご相談を、専門用語を使わず丁寧にお伺いします。",
   active: "top",
   body: `
     <section class="hero">
@@ -166,7 +165,7 @@ const topPage = () => layout({
         </h1>
         <p class="hero__lead">
           「弁護士に相談する」と聞くと、身構えてしまう方が多いと思います。<br />
-          星ヶ丘法律事務所 (仮) は、専門用語をできるだけ使わず、いま起きていることと、<br />
+          星ヶ丘法律事務所は、専門用語をできるだけ使わず、いま起きていることと、<br />
           これから起き得ることを、ふつうの言葉でお伝えします。
         </p>
         <a href="./access.html" class="hero__cta">初回相談のご予約</a>
@@ -207,7 +206,7 @@ const topPage = () => layout({
             <div class="stance__num">03</div>
             <h3 class="stance__title">元公務員としての<br />誠実さ</h3>
             <p class="stance__body">
-              代表弁護士は、弁護士になる前に○○市役所 (仮) で X 年間 (仮) 勤務していました。地域の方の相談を受けてきた経験を、そのまま法律相談の場に持ち込みます。
+              代表弁護士は、弁護士になる前に○○市役所で X 年間勤務していました。地域の方の相談を受けてきた経験を、そのまま法律相談の場に持ち込みます。
             </p>
           </article>
         </div>
@@ -251,7 +250,7 @@ const topPage = () => layout({
             その旨をはっきりお伝えします。
           </p>
           <p style="margin-top: 40px; font-family: var(--font-mincho); letter-spacing: 0.14em; color: var(--gold);">
-            弁護士　${SITE.lawyerName} <span style="font-size:11px; letter-spacing:0.24em;">(仮)</span>
+            弁護士　${SITE.lawyerName}
           </p>
         </div>
         <div class="lawyer__photo" style="max-width: 360px; justify-self: end; width: 100%;"></div>
@@ -273,14 +272,14 @@ function areaTile(num, title, ex, href) {
 // -- LAWYER -----------------------------------------------------
 const lawyerPage = () => layout({
   title: "弁護士紹介",
-  description: "代表弁護士 田中 太郎 (仮) の経歴・志望動機・大切にしていること。元公務員として、市民の相談を受けてきた経験を法律相談の現場に持ち込みます。",
+  description: "代表弁護士 田中 太郎の経歴・志望動機・大切にしていること。元公務員として、市民の相談を受けてきた経験を法律相談の現場に持ち込みます。",
   active: "lawyer",
   body: `
     <section class="page-hero">
       <div class="page-hero__inner">
         <p class="page-hero__eyebrow">Lawyer Profile</p>
         <h1 class="page-hero__title">弁護士紹介</h1>
-        <p class="page-hero__sub">代表弁護士 ${SITE.lawyerName} (仮)</p>
+        <p class="page-hero__sub">代表弁護士 ${SITE.lawyerName}</p>
       </div>
     </section>
 
@@ -289,14 +288,14 @@ const lawyerPage = () => layout({
         <div class="lawyer">
           <div class="lawyer__photo"></div>
           <div class="lawyer__meta">
-            <p class="lawyer__name">${SITE.lawyerName} <span style="font-size:14px; letter-spacing:0.2em; color: var(--gold);">(仮)</span></p>
+            <p class="lawyer__name">${SITE.lawyerName}</p>
             <p class="lawyer__title">Representative — Attorney at Law</p>
 
             <table class="table">
-              <tr><th>氏名</th><td>${SITE.lawyerName} (仮)</td></tr>
-              <tr><th>所属</th><td>岐阜県弁護士会 (仮)</td></tr>
-              <tr><th>登録番号</th><td>第 000000 号 (仮)</td></tr>
-              <tr><th>出身</th><td>岐阜県○○市 (仮)</td></tr>
+              <tr><th>氏名</th><td>${SITE.lawyerName}</td></tr>
+              <tr><th>所属</th><td>岐阜県弁護士会</td></tr>
+              <tr><th>登録番号</th><td>第 000000 号</td></tr>
+              <tr><th>出身</th><td>岐阜県○○市</td></tr>
             </table>
           </div>
         </div>
@@ -306,7 +305,7 @@ const lawyerPage = () => layout({
     <section class="section section--alt section--tight">
       <div class="section__inner section__inner--narrow">
         <p class="section-eyebrow">Career History</p>
-        <h2 class="section-title">経歴 (仮)</h2>
+        <h2 class="section-title">経歴</h2>
         <div class="divider"></div>
         <ul class="prose" style="list-style: none; padding-left: 0;">
           <li style="padding: 18px 0; border-bottom: 1px solid var(--hair); display: grid; grid-template-columns: 200px 1fr; gap: 24px;"><span class="mono-latin" style="color: var(--gold-deep);">平成 XX 年 3 月</span><span>○○大学法学部 卒業</span></li>
@@ -314,7 +313,7 @@ const lawyerPage = () => layout({
           <li style="padding: 18px 0; border-bottom: 1px solid var(--hair); display: grid; grid-template-columns: 200px 1fr; gap: 24px;"><span class="mono-latin" style="color: var(--gold-deep);">平成 XX 年 3 月</span><span>○○市役所 退職（勤続 X 年）</span></li>
           <li style="padding: 18px 0; border-bottom: 1px solid var(--hair); display: grid; grid-template-columns: 200px 1fr; gap: 24px;"><span class="mono-latin" style="color: var(--gold-deep);">平成 XX 年 X 月</span><span>司法試験 合格</span></li>
           <li style="padding: 18px 0; border-bottom: 1px solid var(--hair); display: grid; grid-template-columns: 200px 1fr; gap: 24px;"><span class="mono-latin" style="color: var(--gold-deep);">令和 XX 年 X 月</span><span>弁護士登録（岐阜県弁護士会）</span></li>
-          <li style="padding: 18px 0; display: grid; grid-template-columns: 200px 1fr; gap: 24px;"><span class="mono-latin" style="color: var(--gold-deep);">令和 XX 年 X 月</span><span>星ヶ丘法律事務所 (仮) 開設</span></li>
+          <li style="padding: 18px 0; display: grid; grid-template-columns: 200px 1fr; gap: 24px;"><span class="mono-latin" style="color: var(--gold-deep);">令和 XX 年 X 月</span><span>星ヶ丘法律事務所 開設</span></li>
         </ul>
       </div>
     </section>
@@ -365,7 +364,7 @@ const lawyerPage = () => layout({
 // -- PRACTICE INDEX ---------------------------------------------
 const practiceIndexPage = () => layout({
   title: "取扱分野",
-  description: "相続・離婚・債務整理・交通事故・成年後見・不動産・その他一般民事を扱います。星ヶ丘法律事務所 (仮) の取扱分野一覧。",
+  description: "相続・離婚・債務整理・交通事故・成年後見・不動産・その他一般民事を扱います。星ヶ丘法律事務所の取扱分野一覧。",
   active: "areas",
   assets: "../assets",
   depth: 1,
@@ -503,7 +502,7 @@ const flowPage = () => layout({
               <h3>お問い合わせ</h3>
               <p>お電話またはお問い合わせフォームでご連絡ください。ご相談の概要と、ご希望の日時を 2〜3 候補お知らせいただけるとスムーズです。</p>
               <ul>
-                <li>電話: ${SITE.phone} (仮) / ${SITE.hours} (仮)</li>
+                <li>電話: ${SITE.phone} / ${SITE.hours}</li>
                 <li>お問い合わせフォーム: 24 時間受付</li>
               </ul>
             </div>
@@ -580,8 +579,8 @@ const feePage = () => layout({
         <h2>相談料</h2>
         <table>
           <tr><th>内容</th><th>料金</th></tr>
-          <tr><td>初回相談（60 分まで）</td><td>5,500 円 (仮)</td></tr>
-          <tr><td>継続相談（30 分ごと）</td><td>2,750 円 (仮)</td></tr>
+          <tr><td>初回相談（60 分まで）</td><td>5,500 円</td></tr>
+          <tr><td>継続相談（30 分ごと）</td><td>2,750 円</td></tr>
         </table>
         <p>※初回無料とするかは、ヒアリング後に確定。</p>
 
@@ -598,7 +597,7 @@ const feePage = () => layout({
         <h2>実費・日当</h2>
         <ul>
           <li><strong>実費</strong>: 収入印紙 / 郵券 / 交通費 / コピー代 等の実額</li>
-          <li><strong>日当</strong>: 遠方出張の際、半日 33,000 円 / 1 日 55,000 円 (仮)</li>
+          <li><strong>日当</strong>: 遠方出張の際、半日 33,000 円 / 1 日 55,000 円</li>
         </ul>
 
         <h2>分野別の目安（参考）</h2>
@@ -685,13 +684,13 @@ const accessPage = () => layout({
               <dt>Address</dt>
               <dd>${SITE.postcode}<br />${SITE.address}</dd>
               <dt>Tel</dt>
-              <dd>${SITE.phone} (仮)</dd>
+              <dd>${SITE.phone}</dd>
               <dt>Fax</dt>
-              <dd>058-000-0001 (仮)</dd>
+              <dd>058-000-0001</dd>
               <dt>Email</dt>
-              <dd>${SITE.email} (仮)</dd>
+              <dd>${SITE.email}</dd>
               <dt>Business Hours</dt>
-              <dd>平日 9:00〜18:00 (仮)<br />土日祝: 定休（事前予約で対応可・仮）</dd>
+              <dd>平日 9:00〜18:00<br />土日祝: 定休（事前予約で対応可）</dd>
             </dl>
           </div>
           <div>
@@ -710,15 +709,15 @@ const accessPage = () => layout({
         <h2 style="border: none; padding: 0; margin: 0 0 24px;">交通アクセス</h2>
         <div class="divider"></div>
         <ul>
-          <li><strong>電車</strong>: JR ○○線「○○駅」 徒歩 X 分 (仮)</li>
-          <li><strong>バス</strong>: ○○バス「○○停留所」 徒歩 X 分 (仮)</li>
-          <li><strong>お車</strong>: 東海環状自動車道「○○IC」より約 X 分 (仮) / 提携駐車場あり</li>
+          <li><strong>電車</strong>: JR ○○線「○○駅」 徒歩 X 分</li>
+          <li><strong>バス</strong>: ○○バス「○○停留所」 徒歩 X 分</li>
+          <li><strong>お車</strong>: 東海環状自動車道「○○IC」より約 X 分 / 提携駐車場あり</li>
         </ul>
 
         <h2>出張相談</h2>
         <p>ご高齢・ご病気・お仕事の都合等でご来所が難しい方は、出張相談を承ります。</p>
         <ul>
-          <li>対応エリア: 岐阜県内全域 (仮) / 愛知県一部</li>
+          <li>対応エリア: 岐阜県内全域 / 愛知県一部</li>
           <li>出張料: 距離に応じて別途（料金ページ参照）</li>
         </ul>
       </div>

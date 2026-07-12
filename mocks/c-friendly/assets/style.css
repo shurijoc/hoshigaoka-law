@@ -1,5 +1,5 @@
 /* ==========================================================================
-   星ヶ丘法律事務所 (仮) — mock C 町医者型
+   星ヶ丘法律事務所 — デザイン案 C 地域密着型
    配色: 白 + 暖色差し色 (橙 / 黄土)
    タイポ: 丸ゴシック (Zen Maru Gothic / M PLUS Rounded 1c)
    ========================================================================== */
@@ -974,14 +974,4 @@ a:hover {
 
 .mt-lg {
   margin-top: 40px;
-}
-
-.mock-banner {
-  background: #fff3d9;
-  color: #7a5a10;
-  text-align: center;
-  padding: 6px 12px;
-  font-size: 0.82rem;
-  border-bottom: 1px solid #f0dfaa;
-  letter-spacing: 0.05em;
 }
