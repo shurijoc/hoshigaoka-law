@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星ヶ丘法律事務所 HP デザイン案</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --card: #fff;
+    --border: #e4e2dc;
+    --accent: #34495e;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  main { max-width: 960px; margin: 0 auto; padding: 64px 24px 96px; }
+  h1 { font-size: 28px; font-weight: 600; margin: 0 0 8px; letter-spacing: 0.02em; }
+  .subtitle { color: var(--muted); margin: 0 0 40px; font-size: 15px; }
+  .note { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 40px; font-size: 14px; color: var(--muted); line-height: 1.75; }
+  .note strong { color: var(--fg); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  a.card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 24px; text-decoration: none; color: var(--fg); transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease; }
+  a.card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); border-color: var(--accent); }
+  .card .label { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 8px; }
+  .card h2 { font-size: 20px; margin: 0 0 12px; font-weight: 600; }
+  .card p { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+  .card .meta { font-size: 12px; color: var(--muted); }
+  .swatch { display: inline-flex; gap: 4px; margin-top: 12px; }
+  .swatch span { display: block; width: 20px; height: 20px; border-radius: 4px; border: 1px solid var(--border); }
+  footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>星ヶ丘法律事務所 HP デザイン案</h1>
+  <p class="subtitle">3 案のデザインを実サイズで比較できます</p>
+
+  <div class="note">
+    <strong>ご確認いただきたい点</strong><br>
+    ・掲載している弁護士名・所在地・電話番号などはすべてダミーです<br>
+    ・各案とも同じ原稿を使用しており、比較対象はデザインのみです<br>
+    ・気になった案をお選びください (第1推奨: C 地域密着型 / 第2推奨: E 情緒型)
+  </div>
+
+  <div class="grid">
+    <a class="card" href="/mocks/a-formal/">
+      <span class="label">案 A</span>
+      <h2>重厚・格式型</h2>
+      <p>濃紺 × 金の格式ある佇まい。明朝体で信頼感を打ち出す。企業法務・大型案件に向くトーン。</p>
+      <div class="swatch"><span style="background:#0d1b2a"></span><span style="background:#fdfcf7"></span><span style="background:#b08d57"></span></div>
+      <div class="meta" style="margin-top:12px;">明朝 / 濃紺 × アイボリー × 金</div>
+    </a>
+    <a class="card" href="/mocks/c-friendly/">
+      <span class="label">案 C · 第1推奨</span>
+      <h2>地域密着型</h2>
+      <p>白 + 暖色で親しみやすく。丸ゴシックと大きな顔写真で「わかりやすさ」と「安心」を両立。</p>
+      <div class="swatch"><span style="background:#ffffff"></span><span style="background:#e8874a"></span><span style="background:#f7f6f2"></span></div>
+      <div class="meta" style="margin-top:12px;">丸ゴシック / 白 + 暖色</div>
+    </a>
+    <a class="card" href="/mocks/e-emotive/">
+      <span class="label">案 E · 第2推奨</span>
+      <h2>情緒・詩的型</h2>
+      <p>夜明けを思わせるパステルグラデ。明朝と手書き調で寄り添うトーン。悩み系の相談に強い。</p>
+      <div class="swatch"><span style="background:#cad6e2"></span><span style="background:#e8dcc9"></span><span style="background:#b28a6e"></span></div>
+      <div class="meta" style="margin-top:12px;">明朝 + 手書き / 淡青 × 月色</div>
+    </a>
+  </div>
+
+  <footer>星ヶ丘法律事務所 HP デザイン案 · 公開範囲: 関係者限定</footer>
+</main>
+</body>
+</html>

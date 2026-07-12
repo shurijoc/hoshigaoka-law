@@ -1,0 +1,6 @@
+docs/
+content/
+.claude/
+.git/
+scratchpad/
+*.md
